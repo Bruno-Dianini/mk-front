@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+            input[type="submit"] {
+                background-color: #4caf50;
+                color: #fff;
+                cursor: pointer;
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+
+        #forgotPassword {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post" action="/Login/Submit">
+
+        <label for="userType">Escolha o seu tipo de usuário:</label>
+        <select id="userType" name="userType">
+            <option value="comprador">Comprador</option>
+            <option value="vendedor">Vendedor</option>
+        </select>
+
+        <label for="username">Nome de usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Entrar">
+
+    </form>
+
+    <div id="forgotPassword">
+
+        <a href="recuperacao">Esqueci minha senha</a>
+        <br />
+        <a href="cadastro">Cadastre-se</a>
+    </div>
+
+</body>
+</html>

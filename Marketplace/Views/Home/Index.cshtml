@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px; /* Espaçamento nas laterais */
+            width: 200px;
+            text-align: center;
+            background-color: white;
+            margin-bottom: 30px; /* Adicione uma margem inferior para espaçamento na parte inferior */
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rating {
+            color: #f8d638;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="display-4">Bem vindo ao Marketplace</h1>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar produtos">
+        <button>Pesquisar</button>
+    </div>
+
+    <div class="product-container">
+        <!-- Exemplo de produto -->
+        <div class="product-card">
+            <img class="product-image" src="https://acdn.mitiendanube.com/stores/002/007/282/products/mizano_v2-fabric-red-021-efd188a4a070ed74f316765740378019-640-0.jpg" alt="Nome do Produto">
+            <p>Cadeira Gamer</p>
+            <p>R$700,00</p>
+            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="product-card">
+            <img class="product-image" src="https://m.media-amazon.com/images/I/6109CjoWCKL._AC_UF894,1000_QL80_.jpg" alt="Nome do Produto">
+            <p>PC Gamer</p>
+            <p>R$4800,00</p>
+            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        </div>
+        <div class="product-card">
+            <img class="product-image" src="https://panasonic.vtexassets.com/arquivos/ids/157430-1000-1000/05-BL-LATERAL-2_Easy-Resize.com.jpg?v=637565872965000000" alt="Nome do Produto">
+            <p>Geladeira</p>
+            <p>R$3000,00</p>
+            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        </div>
+        <div class="product-card">
+            <img class="product-image" src="https://images-americanas.b2w.io/produtos/4047759920/imagens/ar-condicionado-split-philco-12000-btus-pac12000tfm12-frio-220v/4047759920_2_large.jpg" alt="Nome do Produto">
+            <p>AR condicionado</p>
+            <p>R$2500,00</p>
+            <div class="rating">&#9733;&#9733;&#9733&#9734;&#9734;</div>
+        </div>
+
+        <!-- Adicione mais produtos aqui conforme necessário -->
+    </div>
+</body>
+</html>
